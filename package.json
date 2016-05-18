@@ -1,0 +1,28 @@
+{
+  "name": "whoots-js",
+  "description": "Request tiles from WMS servers that support EPSG:3857",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "ISC",
+  "author": "Bryan Housel <bryan@mapbox.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mapbox/whoots-js.git"
+  },
+  "bugs": "https://github.com/mapbox/whoots-js/issues",
+  "keywords": [
+    "WMS", "tiles", "EPSG:3857"
+  ],
+  "devDependencies": {
+    "documentation": "^4.0.0-beta",
+    "eslint": "^1.6.0",
+    "retire": "*",
+    "tap": "^2.1.1"
+  },
+  "scripts": {
+    "retire": "retire -p",
+    "lint": "eslint *.js test",
+    "docs": "documentation build --lint --github --format html --output docs/",
+    "test": "npm run lint && tap --cov test/*.js"
+  }
+}
