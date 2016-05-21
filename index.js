@@ -47,7 +47,7 @@ function WhooTS(baseUrl, options) {
  * @param    {Number}  z      Zoom
  * @returns  {String}  url
  */
-WhooTS.getURL = function(layer, x, y, z) {
+WhooTS.prototype.getUrl = function(layer, x, y, z) {
     // for Google/OSM tile scheme we need to alter the y
     y = (Math.pow(2, z) - y - 1);
 
