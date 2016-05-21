@@ -93,7 +93,7 @@ function getTileBbox(x, y, z) {
  */
 function getMercCoords(x, y, z) {
     var resolution = (2 * Math.PI * 6378137 / 256) / Math.pow(2, z),
-        merc_x = (x * resolution -2 * Math.PI  * 6378137 / 2.0),
+        merc_x = (x * resolution - 2 * Math.PI  * 6378137 / 2.0),
         merc_y = (y * resolution - 2 * Math.PI  * 6378137 / 2.0);
 
     return [merc_x, merc_y];
