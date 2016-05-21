@@ -9,9 +9,13 @@
     "type": "git",
     "url": "git://github.com/mapbox/whoots-js.git"
   },
-  "bugs": "https://github.com/mapbox/whoots-js/issues",
+  "bugs": {
+    "url": "https://github.com/mapbox/whoots-js/issues"
+  },
   "keywords": [
-    "WMS", "tiles", "EPSG:3857"
+    "WMS",
+    "tiles",
+    "EPSG:3857"
   ],
   "devDependencies": {
     "documentation": "^4.0.0-beta",
@@ -23,6 +27,13 @@
     "retire": "retire -p",
     "lint": "eslint *.js test",
     "docs": "documentation build --lint --github --format html --output docs/",
-    "test": "npm run lint && tap --cov test/*.js"
-  }
+    "test": "npm run lint && tap --cov test/*.js",
+    "start": "node server.js"
+  },
+  "homepage": "https://github.com/mapbox/whoots-js#readme",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "dependencies": {}
 }
