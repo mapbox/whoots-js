@@ -1,7 +1,6 @@
 [![npm version](https://badge.fury.io/js/whoots-js.svg)](https://badge.fury.io/js/whoots-js)
-<!--
 [![Build Status](https://circleci.com/gh/mapbox/whoots-js.svg?style=svg)](https://circleci.com/gh/mapbox/whoots-js)
--->
+
 ## whoots-js
 
 Request tiles from WMS servers that support EPSG:3857.
@@ -19,9 +18,9 @@ http://geodata.state.nj.us/imagerywms/Natural2015?bbox=-8242663.382160267,496657
 ### Usage
 
 ```js
-    var endpoint = 'http://geodata.state.nj.us/imagerywms';
-    var wms = new WhooTS(endpoint);
-    var url = wms.getUrl('Natural2015', 154308, 197167, 19);
+var endpoint = 'http://geodata.state.nj.us/imagerywms';
+var wms = new WhooTS(endpoint);
+var url = wms.getUrl('Natural2015', 154308, 197167, 19);
 ```
 
 ### Documentation
