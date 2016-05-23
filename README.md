@@ -23,6 +23,21 @@ var wms = new WhooTS(endpoint);
 var url = wms.getUrl('Natural2015', 154308, 197167, 19);
 ```
 
+
+### Server
+
+This project includes a sample redirecting wms proxy server in `server.js`.
+
+`npm run server` will start a local server on port 8080 that redirects tile requests.
+
+Valid tile requests look like:
+
+```
+http://localhost:8080/tms/{z}/{x}/{y}/{layer}/{endpoint}
+http://localhost:8080/tms/19/154308/197167/Natural2015/http://geodata.state.nj.us/imagerywms/Natural2015
+```
+
+
 ### Documentation
 
 Complete API documentation is here:  http://mapbox.github.io/whoots-js/docs/
