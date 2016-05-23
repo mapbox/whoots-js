@@ -7,7 +7,7 @@ var url = require('url');
 var PORT = 8080;
 
 // valid requests look like:
-// http://localhost:8080/tms/{z}/{x}/{y}/{layer}/{endpoint}
+// http://localhost:8080/tms/{z}/{x}/{y}/{layer}/{baseUrl}
 // http://localhost:8080/tms/19/154308/197167/Natural2015/http://geodata.state.nj.us/imagerywms/Natural2015
 function handleRequest(request, response) {
     var pathname = url.parse(request.url, true).pathname;
@@ -18,11 +18,11 @@ function handleRequest(request, response) {
             x = +params[3],
             y = +params[4],
             layer = params[5],
-            endpoint = pathname.replace(params.slice(0,6).join('/') + '/', '');
+            baseUrl = pathname.replace(params.slice(0,6).join('/') + '/', '');
 
-        if (!isNaN(z) && !isNaN(x) && !isNaN(y) && layer && url.parse(endpoint).protocol) {
-            var wms = new WhooTS(endpoint);
-            response.writeHead(302, { 'Location': wms.getUrl(layer, x, y, z) });
+        if (!isNaN(z) && !isNaN(x) && !isNaN(y) && layer && url.parse(baseUrl).protocol) {
+            var wms = new WhooTS();
+            response.writeHead(302, { 'Location': wms.getUrl(baseUrl, layer, x, y, z) });
             response.end('Redirect');
             return;
         }

@@ -10,17 +10,25 @@ This project is a JavaScript port of https://github.com/timwaters/whoots by Tim 
 
 ### What is it?
 
-Given a `z/x/y` tile coordinate like `19/154308/197167`, `whoots-js` will generate a `GetMap` request like this:
+Given a `z/x/y` tile coordinate like `19/154308/197167`, `whoots-js` can request imagery from an EPSG:3857 supporting WMS server like this:
 
-http://geodata.state.nj.us/imagerywms/Natural2015?bbox=-8242663.382160267,4966572.349857613,-8242586.945131982,4966648.786885899&format=image/png&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857&width=256&height=256&layers=Natural2015&map=&styles=
+```
+http://geodata.state.nj.us/imagerywms/Natural2015?
+  bbox=-8242663.382160267,4966572.349857613,-8242586.945131982,4966648.786885899
+  &format=image/png&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857
+  &width=256&height=256&layers=Natural2015
+```
 
 
 ### Usage
 
 ```js
-var endpoint = 'http://geodata.state.nj.us/imagerywms';
-var wms = new WhooTS(endpoint);
-var url = wms.getUrl('Natural2015', 154308, 197167, 19);
+var wms = new WhooTS();
+
+// Get an image url for a given tile coordinate
+var baseUrl = 'http://geodata.state.nj.us/imagerywms/Natural2015';
+var layer = 'Natural2015';
+var url = whoots.getUrl(baseUrl, layer, 154308, 197167, 19);
 ```
 
 
