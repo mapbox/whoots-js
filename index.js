@@ -5,7 +5,7 @@ module.exports = WhooTS;
 
 /**
  * WhooTS
-*
+ *
  * @class  WhooTS
  * @param  {String}  baseUrl    Base url of the WMS server
  * @param  {Object}  [options]
@@ -17,14 +17,10 @@ module.exports = WhooTS;
  * @param  {Number}  [options.width='256']
  * @param  {Number}  [options.height='256']
  * @example
- * var base = 'http://geodata.state.nj.us/imagerywms/';
+ * var base = 'http://geodata.state.nj.us/imagerywms/Natural2015';
  * var whoots = new WhooTS(base);
  */
 function WhooTS(baseUrl, options) {
-    if (baseUrl.match(/\/$/) === null) {
-        baseUrl += '\/';
-    }
-
     this.baseUrl = baseUrl;
     options = options || {};
 
@@ -44,14 +40,16 @@ function WhooTS(baseUrl, options) {
  * @param    {String}  layer  Layer name
  * @param    {Number}  x      Tile coordinate x
  * @param    {Number}  y      Tile coordinate y
- * @param    {Number}  z      Zoom
+ * @param    {Number}  z      Tile zoom
  * @returns  {String}  url
+ * @example
+ * var redirect = whoots.getUrl('Natural2015', 154308, 197167, 19);
  */
 WhooTS.prototype.getUrl = function(layer, x, y, z) {
     // for Google/OSM tile scheme we need to alter the y
     y = (Math.pow(2, z) - y - 1);
 
-    var url = this.baseUrl + layer + '?'
+    var url = this.baseUrl + '?'
         + 'bbox=' + getTileBbox(x, y, z)
         + '&format=' + this.format
         + '&service=' + this.service
@@ -72,7 +70,7 @@ WhooTS.prototype.getUrl = function(layer, x, y, z) {
  * @private
  * @param    {Number}  x  Tile coordinate x
  * @param    {Number}  y  Tile coordinate y
- * @param    {Number}  z  Zoom
+ * @param    {Number}  z  Tile zoom
  * @returns  {String}  String representation of the bounding box
  */
 function getTileBbox(x, y, z) {
@@ -88,7 +86,7 @@ function getTileBbox(x, y, z) {
  * @private
  * @param    {Number}  x  Tile coordinate x
  * @param    {Number}  y  Tile coordinate y
- * @param    {Number}  z  Zoom
+ * @param    {Number}  z  Tile zoom
  * @returns  {Array}   [x, y]
  */
 function getMercCoords(x, y, z) {

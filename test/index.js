@@ -3,7 +3,7 @@
 var test = require('tap').test;
 var WhooTS = require('../.');
 
-var endpoint = 'http://geodata.state.nj.us/imagerywms';
+var endpoint = 'http://geodata.state.nj.us/imagerywms/Natural2015';
 
 test('WhooTS', function(t) {
     t.test('constructor', function(t) {
