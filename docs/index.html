@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>whoots-js 1.0.0 | Documentation</title>
+  <title>whoots-js 1.1.0 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
@@ -14,7 +14,7 @@
       <div class='fixed md-show fix-3 overflow-auto max-height-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>whoots-js</h3>
-          <div class='mb1'><code>1.0.0</code></div>
+          <div class='mb1'><code>1.1.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -27,6 +27,16 @@
                 WhooTS
               </a>
                 <a
+                  href='#WhooTS.getMercCoords'
+                  class='regular block'>
+                  #getMercCoords
+                </a>
+                <a
+                  href='#WhooTS.getTileBbox'
+                  class='regular block'>
+                  #getTileBbox
+                </a>
+                <a
                   href='#WhooTS.getUrl'
                   class='regular block'>
                   #getUrl
@@ -38,9 +48,9 @@
         <div class='px2'>
 <div class='py1'><section class='py2 clearfix'>
   <h2 id='WhooTS' class='mt0'>
-    WhooTS<span class='gray'>(baseUrl, [options])</span>
+    WhooTS<span class='gray'>([options])</span>
   </h2>
-    <p><a href='https://github.com/mapbox/whoots-js/blob/ef70c817d4392a33e370d3f083cc2108bb1a3553/index.js#L23-L34'><code>index.js</code></a></p>
+    <p><a href='https://github.com/mapbox/whoots-js/blob/74ef07d4873388577bd185136f2bb1024efc6ed3/index.js#L21-L31'><code>index.js</code></a></p>
   
   
   
@@ -50,14 +60,6 @@
 
     <h4>Parameters</h4>
     <ul class='suppress-p-margin'>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
- <strong>baseUrl</strong>
-          :
-          <div class='force-inline'>
-            <p>Base url of the WMS server</p>
-
-          </div>
-        </li>
         <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
 =
  <strong>options</strong>
@@ -106,34 +108,163 @@
     </ul>
     <h4>Examples</h4>
 
-    <pre class='overflow-auto'><span class="hljs-keyword">var</span> base = <span class="hljs-string">'http://geodata.state.nj.us/imagerywms/Natural2015'</span>;
-<span class="hljs-keyword">var</span> whoots = <span class="hljs-keyword">new</span> WhooTS(base);</pre>
+    <pre class='overflow-auto'><span class="hljs-keyword">var</span> whoots = <span class="hljs-keyword">new</span> WhooTS(options);</pre>
       <h4>Instance members</h4>
+        <div class='collapsible' id='WhooTS.getMercCoords'>
+          <a href='#WhooTS.getMercCoords'>
+            <code>
+              #getMercCoords<span class='gray'>(x, y, z)</span>
+            </code>
+            <div class='force-inline'>
+              <p>getMercCoords</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2'>
+<section class='py2 clearfix'>
+  <h2 id='WhooTS.getMercCoords' class='mt0'>
+    getMercCoords<span class='gray'>(x, y, z)</span>
+  </h2>
+    <p><a href='https://github.com/mapbox/whoots-js/blob/74ef07d4873388577bd185136f2bb1024efc6ed3/index.js#L91-L97'><code>index.js</code></a></p>
+  
+  
+  
+  
+  
+  <p>getMercCoords</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>
+ <strong>x</strong>
+          :
+          <div class='force-inline'>
+            <p>Pixel coordinate x</p>
+
+          </div>
+        </li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>
+ <strong>y</strong>
+          :
+          <div class='force-inline'>
+            <p>Pixel coordinate y</p>
+
+          </div>
+        </li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>
+ <strong>z</strong>
+          :
+          <div class='force-inline'>
+            <p>Tile zoom</p>
+
+          </div>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>
+</code>
+      :
+      <div class='force-inline'>
+        <p>[x, y]</p>
+
+      </div>
+</section>
+          </div>
+        </div>
+        <div class='collapsible' id='WhooTS.getTileBbox'>
+          <a href='#WhooTS.getTileBbox'>
+            <code>
+              #getTileBbox<span class='gray'>(x, y, z)</span>
+            </code>
+            <div class='force-inline'>
+              <p>getTileBbox</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2'>
+<section class='py2 clearfix'>
+  <h2 id='WhooTS.getTileBbox' class='mt0'>
+    getTileBbox<span class='gray'>(x, y, z)</span>
+  </h2>
+    <p><a href='https://github.com/mapbox/whoots-js/blob/74ef07d4873388577bd185136f2bb1024efc6ed3/index.js#L73-L81'><code>index.js</code></a></p>
+  
+  
+  
+  
+  
+  <p>getTileBbox</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>
+ <strong>x</strong>
+          :
+          <div class='force-inline'>
+            <p>Tile coordinate x</p>
+
+          </div>
+        </li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>
+ <strong>y</strong>
+          :
+          <div class='force-inline'>
+            <p>Tile coordinate y</p>
+
+          </div>
+        </li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>
+ <strong>z</strong>
+          :
+          <div class='force-inline'>
+            <p>Tile zoom</p>
+
+          </div>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+</code>
+      :
+      <div class='force-inline'>
+        <p>String of the bounding box</p>
+
+      </div>
+</section>
+          </div>
+        </div>
         <div class='collapsible' id='WhooTS.getUrl'>
           <a href='#WhooTS.getUrl'>
             <code>
-              #getUrl<span class='gray'>(layer, x, y, z)</span>
+              #getUrl<span class='gray'>(baseUrl, layer, x, y, z)</span>
             </code>
             <div class='force-inline'>
-              <p>getURL</p>
+              <p>getUrl</p>
 
             </div>
           </a>
           <div class='collapser border px2'>
 <section class='py2 clearfix'>
   <h2 id='WhooTS.getUrl' class='mt0'>
-    getUrl<span class='gray'>(layer, x, y, z)</span>
+    getUrl<span class='gray'>(baseUrl, layer, x, y, z)</span>
   </h2>
-    <p><a href='https://github.com/mapbox/whoots-js/blob/ef70c817d4392a33e370d3f083cc2108bb1a3553/index.js#L48-L64'><code>index.js</code></a></p>
+    <p><a href='https://github.com/mapbox/whoots-js/blob/74ef07d4873388577bd185136f2bb1024efc6ed3/index.js#L48-L62'><code>index.js</code></a></p>
   
   
   
   
   
-  <p>getURL</p>
+  <p>getUrl</p>
 
     <h4>Parameters</h4>
     <ul class='suppress-p-margin'>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+ <strong>baseUrl</strong>
+          :
+          <div class='force-inline'>
+            <p>Base url of the WMS server</p>
+
+          </div>
+        </li>
         <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
  <strong>layer</strong>
           :
@@ -177,7 +308,9 @@
       </div>
     <h4>Examples</h4>
 
-    <pre class='overflow-auto'><span class="hljs-keyword">var</span> redirect = whoots.getUrl(<span class="hljs-string">'Natural2015'</span>, <span class="hljs-number">154308</span>, <span class="hljs-number">197167</span>, <span class="hljs-number">19</span>);</pre>
+    <pre class='overflow-auto'><span class="hljs-keyword">var</span> baseUrl = <span class="hljs-string">'http://geodata.state.nj.us/imagerywms/Natural2015'</span>;
+<span class="hljs-keyword">var</span> layer = <span class="hljs-string">'Natural2015'</span>;
+<span class="hljs-keyword">var</span> url = whoots.getUrl(baseUrl, layer, <span class="hljs-number">154308</span>, <span class="hljs-number">197167</span>, <span class="hljs-number">19</span>);</pre>
 </section>
           </div>
         </div>

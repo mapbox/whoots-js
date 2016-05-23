@@ -1,7 +1,7 @@
 {
   "name": "whoots-js",
   "description": "Request tiles from WMS servers that support EPSG:3857",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "index.js",
   "license": "ISC",
   "author": "Bryan Housel <bryan@mapbox.com>",
