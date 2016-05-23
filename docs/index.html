@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>whoots-js 0.0.0 | Documentation</title>
+  <title>whoots-js 1.0.0 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
@@ -14,7 +14,7 @@
       <div class='fixed md-show fix-3 overflow-auto max-height-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>whoots-js</h3>
-          <div class='mb1'><code>0.0.0</code></div>
+          <div class='mb1'><code>1.0.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -40,7 +40,7 @@
   <h2 id='WhooTS' class='mt0'>
     WhooTS<span class='gray'>(baseUrl, [options])</span>
   </h2>
-    <p><a href='https://github.com/mapbox/whoots-js/blob/1634223b5ce8256d2bc56be6292a37809a6838af/index.js#L23-L38'><code>index.js</code></a></p>
+    <p><a href='https://github.com/mapbox/whoots-js/blob/ef70c817d4392a33e370d3f083cc2108bb1a3553/index.js#L23-L34'><code>index.js</code></a></p>
   
   
   
@@ -106,7 +106,7 @@
     </ul>
     <h4>Examples</h4>
 
-    <pre class='overflow-auto'><span class="hljs-keyword">var</span> base = <span class="hljs-string">'http://geodata.state.nj.us/imagerywms/'</span>;
+    <pre class='overflow-auto'><span class="hljs-keyword">var</span> base = <span class="hljs-string">'http://geodata.state.nj.us/imagerywms/Natural2015'</span>;
 <span class="hljs-keyword">var</span> whoots = <span class="hljs-keyword">new</span> WhooTS(base);</pre>
       <h4>Instance members</h4>
         <div class='collapsible' id='WhooTS.getUrl'>
@@ -124,7 +124,7 @@
   <h2 id='WhooTS.getUrl' class='mt0'>
     getUrl<span class='gray'>(layer, x, y, z)</span>
   </h2>
-    <p><a href='https://github.com/mapbox/whoots-js/blob/1634223b5ce8256d2bc56be6292a37809a6838af/index.js#L50-L66'><code>index.js</code></a></p>
+    <p><a href='https://github.com/mapbox/whoots-js/blob/ef70c817d4392a33e370d3f083cc2108bb1a3553/index.js#L48-L64'><code>index.js</code></a></p>
   
   
   
@@ -162,7 +162,7 @@
  <strong>z</strong>
           :
           <div class='force-inline'>
-            <p>Zoom</p>
+            <p>Tile zoom</p>
 
           </div>
         </li>
@@ -175,6 +175,9 @@
         <p>url</p>
 
       </div>
+    <h4>Examples</h4>
+
+    <pre class='overflow-auto'><span class="hljs-keyword">var</span> redirect = whoots.getUrl(<span class="hljs-string">'Natural2015'</span>, <span class="hljs-number">154308</span>, <span class="hljs-number">197167</span>, <span class="hljs-number">19</span>);</pre>
 </section>
           </div>
         </div>
