@@ -1,6 +1,6 @@
 'use strict';
 
-var WhooTS = require('.');
+var WhooTS = require('./');
 var http = require('http');
 var url = require('url');
 
@@ -21,8 +21,7 @@ function handleRequest(request, response) {
             baseUrl = pathname.replace(params.slice(0,6).join('/') + '/', '');
 
         if (!isNaN(z) && !isNaN(x) && !isNaN(y) && layer && url.parse(baseUrl).protocol) {
-            var wms = new WhooTS();
-            response.writeHead(302, { 'Location': wms.getUrl(baseUrl, layer, x, y, z) });
+            response.writeHead(302, { 'Location': WhooTS.getUrl(baseUrl, layer, x, y, z) });
             response.end('Redirect');
             return;
         }
