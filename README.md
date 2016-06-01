@@ -23,12 +23,10 @@ http://geodata.state.nj.us/imagerywms/Natural2015?
 ### Usage
 
 ```js
-var wms = new WhooTS();
-
 // Get an image url for a given tile coordinate
 var baseUrl = 'http://geodata.state.nj.us/imagerywms/Natural2015';
 var layer = 'Natural2015';
-var url = whoots.getUrl(baseUrl, layer, 154308, 197167, 19);
+var url = WhooTS.getUrl(baseUrl, layer, 154308, 197167, 19);
 ```
 
 
