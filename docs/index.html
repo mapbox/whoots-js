@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>whoots-js 1.1.0 | Documentation</title>
+  <title>whoots-js 2.0.0 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
@@ -14,7 +14,7 @@
       <div class='fixed md-show fix-3 overflow-auto max-height-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>whoots-js</h3>
-          <div class='mb1'><code>1.1.0</code></div>
+          <div class='mb1'><code>2.0.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -22,110 +22,30 @@
             type='text' />
           <div id='toc'>
               <a
-                href='#WhooTS'
+                href='#getMercCoords'
                 class='block bold'>
-                WhooTS
+                getMercCoords
               </a>
-                <a
-                  href='#WhooTS.getMercCoords'
-                  class='regular block'>
-                  #getMercCoords
-                </a>
-                <a
-                  href='#WhooTS.getTileBbox'
-                  class='regular block'>
-                  #getTileBbox
-                </a>
-                <a
-                  href='#WhooTS.getUrl'
-                  class='regular block'>
-                  #getUrl
-                </a>
+              <a
+                href='#getTileBBox'
+                class='block bold'>
+                getTileBBox
+              </a>
+              <a
+                href='#getURL'
+                class='block bold'>
+                getURL
+              </a>
           </div>
         </div>
       </div>
       <div class='fix-margin-3'>
         <div class='px2'>
 <div class='py1'><section class='py2 clearfix'>
-  <h2 id='WhooTS' class='mt0'>
-    WhooTS<span class='gray'>([options])</span>
-  </h2>
-    <p><a href='https://github.com/mapbox/whoots-js/blob/74ef07d4873388577bd185136f2bb1024efc6ed3/index.js#L21-L31'><code>index.js</code></a></p>
-  
-  
-  
-  
-  
-  <p>WhooTS</p>
-
-    <h4>Parameters</h4>
-    <ul class='suppress-p-margin'>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
-=
- <strong>options</strong>
-          :
-          <div class='force-inline'>
-            
-          </div>
-            <ul>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-=
- options.format
-                    (default <code>&#x27;image/png&#x27;</code>)
-                  </li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-=
- options.service
-                    (default <code>&#x27;WMS&#x27;</code>)
-                  </li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-=
- options.version
-                    (default <code>&#x27;1.1.1&#x27;</code>)
-                  </li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-=
- options.request
-                    (default <code>&#x27;GetMap&#x27;</code>)
-                  </li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-=
- options.srs
-                    (default <code>&#x27;EPSG:3857&#x27;</code>)
-                  </li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>
-=
- options.width
-                    (default <code>&#x27;256&#x27;</code>)
-                  </li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>
-=
- options.height
-                    (default <code>&#x27;256&#x27;</code>)
-                  </li>
-            </ul>
-        </li>
-    </ul>
-    <h4>Examples</h4>
-
-    <pre class='overflow-auto'><span class="hljs-keyword">var</span> whoots = <span class="hljs-keyword">new</span> WhooTS(options);</pre>
-      <h4>Instance members</h4>
-        <div class='collapsible' id='WhooTS.getMercCoords'>
-          <a href='#WhooTS.getMercCoords'>
-            <code>
-              #getMercCoords<span class='gray'>(x, y, z)</span>
-            </code>
-            <div class='force-inline'>
-              <p>getMercCoords</p>
-
-            </div>
-          </a>
-          <div class='collapser border px2'>
-<section class='py2 clearfix'>
-  <h2 id='WhooTS.getMercCoords' class='mt0'>
+  <h2 id='getMercCoords' class='mt0'>
     getMercCoords<span class='gray'>(x, y, z)</span>
   </h2>
-    <p><a href='https://github.com/mapbox/whoots-js/blob/74ef07d4873388577bd185136f2bb1024efc6ed3/index.js#L91-L97'><code>index.js</code></a></p>
+    <p><a href='https://github.com/mapbox/whoots-js/blob/4147eb3d0bac46f13fa9921a5b28709b8e12ed43/index.js#L70-L76'><code>index.js</code></a></p>
   
   
   
@@ -169,30 +89,17 @@
 
       </div>
 </section>
-          </div>
-        </div>
-        <div class='collapsible' id='WhooTS.getTileBbox'>
-          <a href='#WhooTS.getTileBbox'>
-            <code>
-              #getTileBbox<span class='gray'>(x, y, z)</span>
-            </code>
-            <div class='force-inline'>
-              <p>getTileBbox</p>
-
-            </div>
-          </a>
-          <div class='collapser border px2'>
-<section class='py2 clearfix'>
-  <h2 id='WhooTS.getTileBbox' class='mt0'>
-    getTileBbox<span class='gray'>(x, y, z)</span>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='getTileBBox' class='mt0'>
+    getTileBBox<span class='gray'>(x, y, z)</span>
   </h2>
-    <p><a href='https://github.com/mapbox/whoots-js/blob/74ef07d4873388577bd185136f2bb1024efc6ed3/index.js#L73-L81'><code>index.js</code></a></p>
+    <p><a href='https://github.com/mapbox/whoots-js/blob/4147eb3d0bac46f13fa9921a5b28709b8e12ed43/index.js#L52-L60'><code>index.js</code></a></p>
   
   
   
   
   
-  <p>getTileBbox</p>
+  <p>getTileBBox</p>
 
     <h4>Parameters</h4>
     <ul class='suppress-p-margin'>
@@ -230,30 +137,17 @@
 
       </div>
 </section>
-          </div>
-        </div>
-        <div class='collapsible' id='WhooTS.getUrl'>
-          <a href='#WhooTS.getUrl'>
-            <code>
-              #getUrl<span class='gray'>(baseUrl, layer, x, y, z)</span>
-            </code>
-            <div class='force-inline'>
-              <p>getUrl</p>
-
-            </div>
-          </a>
-          <div class='collapser border px2'>
-<section class='py2 clearfix'>
-  <h2 id='WhooTS.getUrl' class='mt0'>
-    getUrl<span class='gray'>(baseUrl, layer, x, y, z)</span>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='getURL' class='mt0'>
+    getURL<span class='gray'>(baseUrl, [options.height], x, y, z, [options], layer)</span>
   </h2>
-    <p><a href='https://github.com/mapbox/whoots-js/blob/74ef07d4873388577bd185136f2bb1024efc6ed3/index.js#L48-L62'><code>index.js</code></a></p>
+    <p><a href='https://github.com/mapbox/whoots-js/blob/4147eb3d0bac46f13fa9921a5b28709b8e12ed43/index.js#L25-L41'><code>index.js</code></a></p>
   
   
   
   
   
-  <p>getUrl</p>
+  <p>getURL</p>
 
     <h4>Parameters</h4>
     <ul class='suppress-p-margin'>
@@ -265,12 +159,13 @@
 
           </div>
         </li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
- <strong>layer</strong>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>
+=
+ <strong>options.height</strong>
+            (default <code>&#x27;256&#x27;</code>)
           :
           <div class='force-inline'>
-            <p>Layer name</p>
-
+            
           </div>
         </li>
         <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>
@@ -297,6 +192,54 @@
 
           </div>
         </li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+=
+ <strong>options</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+=
+ options.service
+                    (default <code>&#x27;WMS&#x27;</code>)
+                  </li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+=
+ options.version
+                    (default <code>&#x27;1.1.1&#x27;</code>)
+                  </li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+=
+ options.request
+                    (default <code>&#x27;GetMap&#x27;</code>)
+                  </li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+=
+ options.srs
+                    (default <code>&#x27;EPSG:3857&#x27;</code>)
+                  </li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>
+=
+ options.width
+                    (default <code>&#x27;256&#x27;</code>)
+                  </li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+=
+ options.format
+                    (default <code>&#x27;image/png&#x27;</code>)
+                  </li>
+            </ul>
+        </li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+ <strong>layer</strong>
+          :
+          <div class='force-inline'>
+            <p>Layer name</p>
+
+          </div>
+        </li>
     </ul>
       <h4>Returns</h4>
       <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
@@ -310,10 +253,7 @@
 
     <pre class='overflow-auto'><span class="hljs-keyword">var</span> baseUrl = <span class="hljs-string">'http://geodata.state.nj.us/imagerywms/Natural2015'</span>;
 <span class="hljs-keyword">var</span> layer = <span class="hljs-string">'Natural2015'</span>;
-<span class="hljs-keyword">var</span> url = whoots.getUrl(baseUrl, layer, <span class="hljs-number">154308</span>, <span class="hljs-number">197167</span>, <span class="hljs-number">19</span>);</pre>
-</section>
-          </div>
-        </div>
+<span class="hljs-keyword">var</span> url = whoots.getURL(baseUrl, layer, <span class="hljs-number">154308</span>, <span class="hljs-number">197167</span>, <span class="hljs-number">19</span>);</pre>
 </section>
 </div>
         </div>
