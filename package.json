@@ -19,7 +19,7 @@
   ],
   "devDependencies": {
     "documentation": "^4.0.0-beta",
-    "eslint": "^1.6.0",
+    "eslint": "3.0.0",
     "retire": "*",
     "tap": "^2.1.1"
   },
