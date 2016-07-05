@@ -18,13 +18,11 @@
     "EPSG:3857"
   ],
   "devDependencies": {
-    "documentation": "^4.0.0-beta",
+    "documentation": "4.0.0-beta",
     "eslint": "3.0.0",
-    "retire": "*",
-    "tap": "^2.1.1"
+    "tap": "6.1.1"
   },
   "scripts": {
-    "retire": "retire -p",
     "lint": "eslint *.js test",
     "docs": "documentation build --lint --github --format html --output docs/",
     "test": "npm run lint && tap --cov test/*.js",
