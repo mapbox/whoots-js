@@ -20,7 +20,7 @@
   "devDependencies": {
     "documentation": "4.0.0-beta",
     "eslint": "3.0.1",
-    "tap": "6.1.1"
+    "tap": "6.2.0"
   },
   "engines": {
     "node": ">=4.0.0"
