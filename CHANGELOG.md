@@ -1,5 +1,9 @@
 :warning: = Breaking change
 
+## 2.1.0
+##### Jul 15, 2016
+* Release as ES6 module alongside UMD build, add `jsnext:main` to `package.json`
+
 ## 2.0.0
 ##### Jun 1, 2016
 * :warning: Refactor for a classless API
