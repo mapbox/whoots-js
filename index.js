@@ -1,4 +1,5 @@
-'use strict';
+export { getURL, getTileBBox, getMercCoords };
+
 
 /**
  * getURL
@@ -22,11 +23,11 @@
  * var layer = 'Natural2015';
  * var url = whoots.getURL(baseUrl, layer, 154308, 197167, 19);
  */
-exports.getURL = function(baseUrl, layer, x, y, z, options) {
+function getURL(baseUrl, layer, x, y, z, options) {
     options = options || {};
 
     var url = baseUrl + '?' + [
-        'bbox='    + exports.getTileBBox(x, y, z),
+        'bbox='    + getTileBBox(x, y, z),
         'format='  + (options.format || 'image/png'),
         'service=' + (options.service || 'WMS'),
         'version=' + (options.version || '1.1.1'),
@@ -38,7 +39,7 @@ exports.getURL = function(baseUrl, layer, x, y, z, options) {
     ].join('&');
 
     return url;
-};
+}
 
 
 /**
@@ -49,15 +50,16 @@ exports.getURL = function(baseUrl, layer, x, y, z, options) {
  * @param    {Number}  z  Tile zoom
  * @returns  {String}  String of the bounding box
  */
-exports.getTileBBox = function(x, y, z) {
+function getTileBBox(x, y, z) {
     // for Google/OSM tile scheme we need to alter the y
     y = (Math.pow(2, z) - y - 1);
 
-    var min = exports.getMercCoords(x * 256, y * 256, z),
-        max = exports.getMercCoords((x + 1) * 256, (y + 1) * 256, z);
+    var min = getMercCoords(x * 256, y * 256, z),
+        max = getMercCoords((x + 1) * 256, (y + 1) * 256, z);
 
     return min[0] + ',' + min[1] + ',' + max[0] + ',' + max[1];
-};
+}
+
 
 /**
  * getMercCoords
@@ -67,10 +69,10 @@ exports.getTileBBox = function(x, y, z) {
  * @param    {Number}  z  Tile zoom
  * @returns  {Array}   [x, y]
  */
-exports.getMercCoords = function(x, y, z) {
+function getMercCoords(x, y, z) {
     var resolution = (2 * Math.PI * 6378137 / 256) / Math.pow(2, z),
         merc_x = (x * resolution - 2 * Math.PI  * 6378137 / 2.0),
         merc_y = (y * resolution - 2 * Math.PI  * 6378137 / 2.0);
 
     return [merc_x, merc_y];
-};
+}
