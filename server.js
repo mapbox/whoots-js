@@ -21,7 +21,7 @@ function handleRequest(request, response) {
             baseUrl = pathname.replace(params.slice(0,6).join('/') + '/', '');
 
         if (!isNaN(z) && !isNaN(x) && !isNaN(y) && layer && url.parse(baseUrl).protocol) {
-            response.writeHead(302, { 'Location': WhooTS.getUrl(baseUrl, layer, x, y, z) });
+            response.writeHead(302, { 'Location': WhooTS.getURL(baseUrl, layer, x, y, z) });
             response.end('Redirect');
             return;
         }
