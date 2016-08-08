@@ -1,5 +1,7 @@
 [![npm version](https://badge.fury.io/js/whoots-js.svg)](https://badge.fury.io/js/whoots-js)
-[![Build Status](https://circleci.com/gh/mapbox/whoots-js.svg?style=svg)](https://circleci.com/gh/mapbox/whoots-js)
+[![Build Status](https://circleci.com/gh/mapbox/whoots-js.svg?style=shield)](https://circleci.com/gh/mapbox/whoots-js)
+[![Coverage Status](https://coveralls.io/repos/github/mapbox/whoots-js/badge.svg?branch=master)](https://coveralls.io/github/mapbox/whoots-js?branch=master)
+
 
 ## whoots-js
 
