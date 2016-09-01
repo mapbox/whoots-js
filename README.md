@@ -48,4 +48,4 @@ http://localhost:8080/tms/19/154308/197167/Natural2015/http://geodata.state.nj.u
 
 ### Documentation
 
-Complete API documentation is here:  http://mapbox.github.io/whoots-js/docs/
+Complete API documentation is here:  http://mapbox.github.io/whoots-js/
