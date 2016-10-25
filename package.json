@@ -6,39 +6,28 @@
   "jsnext:main": "index.js",
   "license": "ISC",
   "author": "Bryan Housel <bryan@mapbox.com>",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/mapbox/whoots-js.git"
-  },
-  "bugs": {
-    "url": "https://github.com/mapbox/whoots-js/issues"
-  },
+  "repository": "mapbox/whoots-js",
   "keywords": [
     "WMS",
     "tiles",
     "EPSG:3857"
   ],
+  "dependencies": {},
   "devDependencies": {
     "coveralls": "^2.11.12",
     "documentation": "4.0.0-beta5",
-    "eslint": "~3.8.0",
-    "rollup": "0.36.1",
-    "tap": "~8.0.0"
+    "eslint": "^3.8.0",
+    "rollup": "0.36.3",
+    "tap": "^8.0.0"
   },
   "engines": {
     "node": ">=4.0.0"
   },
   "scripts": {
-    "pretest": "rollup -f umd -n WhooTS index.js --no-indent --no-strict -o index.umd.js",
-    "lint": "eslint index.js server.js test",
+    "build": "rollup -f umd -n WhooTS index.js --no-indent --no-strict -o index.umd.js",
     "docs": "documentation build index.js --lint --github --format html --output docs/",
-    "test": "npm run lint && tap --cov test/*.js",
-    "start": "node server.js"
-  },
-  "homepage": "https://github.com/mapbox/whoots-js#readme",
-  "directories": {
-    "doc": "docs",
-    "test": "test"
-  },
-  "dependencies": {}
+    "lint": "eslint index.js server.js test",
+    "start": "node server.js",
+    "test": "npm run lint && npm run build && tap --cov test/*.js"
+  }
 }
