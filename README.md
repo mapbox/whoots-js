@@ -1,4 +1,4 @@
-[![npm version](https://badge.fury.io/js/whoots-js.svg)](https://badge.fury.io/js/whoots-js)
+[![npm version](https://badge.fury.io/js/%40mapbox%2Fwhoots-js.svg)](https://badge.fury.io/js/%40mapbox%2Fwhoots-js)
 [![Build Status](https://circleci.com/gh/mapbox/whoots-js/tree/master.svg?style=shield)](https://circleci.com/gh/mapbox/whoots-js)
 [![Coverage Status](https://coveralls.io/repos/github/mapbox/whoots-js/badge.svg?branch=master)](https://coveralls.io/github/mapbox/whoots-js?branch=master)
 
@@ -25,6 +25,8 @@ http://geodata.state.nj.us/imagerywms/Natural2015?
 ### Usage
 
 ```js
+var WhooTS = require('@mapbox/whoots-js');
+
 // Get an image url for a given tile coordinate
 var baseUrl = 'http://geodata.state.nj.us/imagerywms/Natural2015';
 var layer = 'Natural2015';

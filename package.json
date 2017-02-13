@@ -1,5 +1,5 @@
 {
-  "name": "whoots-js",
+  "name": "@mapbox/whoots-js",
   "description": "Request tiles from WMS servers that support EPSG:3857",
   "version": "2.1.0",
   "main": "index.umd.js",
