@@ -16,7 +16,7 @@
   "devDependencies": {
     "coveralls": "^2.11.12",
     "documentation": "4.0.0-beta5",
-    "eslint": "^3.8.0",
+    "eslint": "^3.16.0",
     "greenkeeper-postpublish": "^1.0.1",
     "rollup": "0.41.4",
     "tap": "^10.1.0"
