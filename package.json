@@ -14,7 +14,7 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "coveralls": "^2.11.12",
+    "coveralls": "^2.13.0",
     "documentation": "4.0.0-beta5",
     "eslint": "^3.8.0",
     "greenkeeper-postpublish": "^1.0.1",
