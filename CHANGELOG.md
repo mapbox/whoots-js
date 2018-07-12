@@ -1,4 +1,11 @@
-:warning: = Breaking change
+_Breaking changes, which may affect downstream projects are marked with a_ :warning:
+
+## 3.1.0
+##### 2018-Jul-12
+* Replace legacy Rollup `jsnext:main` with now standard `module` ([#74])
+* :warning: Drop support for Node 4
+
+[#74]: https://github.com/mapbox/whoots-js/issues/74
 
 ## 3.0.0
 ##### 2017-Feb-13
