@@ -21,7 +21,7 @@
     "tap": "^12.0.0"
   },
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=6.0.0"
   },
   "scripts": {
     "build": "rollup -f umd -n WhooTS index.mjs --no-indent --no-strict -o index.js",
