@@ -1,9 +1,12 @@
 .DS_Store
+.esm-cache
+.vscode/
 .nyc_output/
-circle.yml
+.travis.yml
 coverage/
 docs/
 node_modules/
 npm-debug.log
+package-lock.json
 test/
 RELEASE.md
