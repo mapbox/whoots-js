@@ -2,11 +2,15 @@
 .esm-cache
 .vscode/
 .nyc_output/
+.eslintrc
 .travis.yml
+
 coverage/
 docs/
 node_modules/
+test/
+
 npm-debug.log
 package-lock.json
-test/
+CODE_OF_CONDUCT.md
 RELEASE.md
