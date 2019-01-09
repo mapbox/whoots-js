@@ -38,7 +38,7 @@ var url = WhooTS.getURL(baseUrl, layer, 154308, 197167, 19);
 
 This project includes a sample redirecting wms proxy server in `server.js`.
 
-`npm run server` will start a local server on port 8080 that redirects tile requests.
+`npm run start` will start a local server on port 8080 that redirects tile requests.
 
 Valid tile requests look like:
 
