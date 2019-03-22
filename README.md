@@ -15,7 +15,7 @@ This project is a JavaScript port of https://github.com/timwaters/whoots by Tim 
 Given a `z/x/y` tile coordinate like `19/154308/197167`, `whoots-js` can request imagery from an EPSG:3857 supporting WMS server like this:
 
 ```
-http://geodata.state.nj.us/imagerywms/Natural2015?
+https://img.nj.gov/imagerywms/Natural2015?
   bbox=-8242663.382160267,4966572.349857613,-8242586.945131982,4966648.786885899
   &format=image/png&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857
   &width=256&height=256&layers=Natural2015
@@ -28,7 +28,7 @@ http://geodata.state.nj.us/imagerywms/Natural2015?
 var WhooTS = require('@mapbox/whoots-js');
 
 // Get an image url for a given tile coordinate
-var baseUrl = 'http://geodata.state.nj.us/imagerywms/Natural2015';
+var baseUrl = 'https://img.nj.gov/imagerywms/Natural2015';
 var layer = 'Natural2015';
 var url = WhooTS.getURL(baseUrl, layer, 154308, 197167, 19);
 ```
@@ -44,7 +44,7 @@ Valid tile requests look like:
 
 ```
 http://localhost:8080/tms/{z}/{x}/{y}/{layer}/{endpoint}
-http://localhost:8080/tms/19/154308/197167/Natural2015/http://geodata.state.nj.us/imagerywms/Natural2015
+http://localhost:8080/tms/19/154308/197167/Natural2015/https://img.nj.gov/imagerywms/Natural2015
 ```
 
 

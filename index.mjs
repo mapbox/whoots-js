@@ -19,7 +19,7 @@ export { getURL, getTileBBox, getMercCoords };
  * @param    {Number}  [options.height='256']
  * @returns  {String}  url
  * @example
- * var baseUrl = 'http://geodata.state.nj.us/imagerywms/Natural2015';
+ * var baseUrl = 'https://img.nj.gov/imagerywms/Natural2015';
  * var layer = 'Natural2015';
  * var url = whoots.getURL(baseUrl, layer, 154308, 197167, 19);
  */
